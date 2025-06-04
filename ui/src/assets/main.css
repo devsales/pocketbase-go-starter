@@ -1,4 +1,16 @@
 @import "tailwindcss";
-@import "basecoat-css";
-@import "./theme.css";
 @plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+	themes:
+		corporate --default,
+		business;
+}
+@plugin "daisyui/theme" {
+	name: "corporate";
+	default: true;
+	--color-base-200: oklch(97% 0 0);
+}
+@plugin "daisyui/theme" {
+	name: "business";
+	--radius-selector: 0.25rem;
+}
