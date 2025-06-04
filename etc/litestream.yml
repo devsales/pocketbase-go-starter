@@ -1,0 +1,14 @@
+logging:
+  level: info
+  type: json
+  stderr: false
+
+dbs:
+  - path: /root/app/pb_data/data.db
+    replicas:
+      # example with Fly.io
+      - name: tigris
+        type: s3
+        bucket: [BUCKET_NAME]
+        region: auto
+        endpoint: fly.storage.tigris.dev

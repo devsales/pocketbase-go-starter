@@ -1,0 +1,10 @@
+# OS
+.DS_Store
+Thumbs.db
+
+pb_data/
+
+.env
+
+# When running with Air
+tmp/
