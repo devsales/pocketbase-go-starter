@@ -1,9 +1,9 @@
 #!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status
 set -e
 
 # Restore the database if it does not already exist.
-# Use the directory our binary is in `/usr/local/bin/` to properly replicate
-# and restore with PocketBase's default locaiton for the database.
 if [ -f /root/app/pb_data/data.db ]; then
   echo "Database already exists, skipping restore"
 else
